@@ -1,0 +1,16 @@
+.marq{
+    animation-name: marquee;
+    animation-duration: initial;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+@keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      
+}

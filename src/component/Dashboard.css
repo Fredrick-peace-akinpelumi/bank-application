@@ -1,0 +1,141 @@
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{   }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}	
+body{
+    overflow-x: hidden;
+}
+
+.shift{
+    /* margin-left: 50vh !important; */
+    /* box-shadow: 0 1px 5px 0px ; */
+    /* border: solid thick red; */
+}
+.sign{
+    margin-left: -55vh;
+    /* border: solid thick red; */
+}
+.butt{
+    background-color:rgb(64,25,109) !important;
+    width:13vh; 
+}
+.butt:hover{
+    margin-bottom: 5px;
+}
+.butto{
+    background-color:rgb(64,25,109) !important;
+    width:13vh !important; 
+}
+.butto:hover{
+    margin-bottom: 5px !important;
+}
+.bank{
+    font-size: 4vh;
+     color: rgb(64,25,109);
+}
+.padd{
+    padding: 80px;
+    margin-left: 40vh !important;
+    margin-top: 20vh !important;
+    /* border: thick solid red; */
+}
+.round{
+    /* border: thick solid red; */
+    margin-top: 10vh;
+   transform: translateX(-40vh);
+
+}
+.sec{
+    margin-top: 20vh;
+    width: 60vh;
+   transform: translateX(-40vh);
+
+}
+.four{
+    margin-top: 20vh;
+    width: 50vh;
+    height: 50vh;
+   transform: translateX(-50vh);
+}
+.thir{
+    margin-top: 20vh;
+    width: 50vh;
+    height: 40vh;
+   transform: translateX(40vh);
+}
+.seven{
+    margin-top: 10vh;
+    width: 50vh;
+    height: 50vh;
+   transform: translateX(40vh);
+}
+.theColor{
+    color: rgb(64,25,109);
+}
+.up{
+    margin-top: -100px;
+}
+.down{
+    margin-top: 80px;
+}
+.contain{
+    
+    overflow:hidden;
+}
+.marquee{
+      /* height: 20vh; */
+      width: 45vh !important;
+    display:block;
+  position:relative;
+  animation:scroll 20s linear infinite;
+ 
+  }
+  
+  .contain:hover {
+      animation-play-state: paused
+  }
+  
+  .content {
+    float:left;
+  }
+  
+  /* Make it move */
+  @keyframes scroll{
+  0% {left:0%;}
+  100% {left:-50%;}
+  }
+  .size{
+    width: 110px;
+    height: 70px;
+  }
+  table{
+    width: 100vh !important;
+  }
+
+  .get{
+    position: relative;
+    height: 40vh;
+    margin-top: 100px;
+    width: 100vh !important;
+    background-color: rgb(223,227,255);
+    overflow: hidden;
+  }
+  .getImage{
+    /* position: absolute; */
+    margin-left: 0px;
+    width: 60vh;
+    margin-top: -50px;
+  }
+  .what{
+    width: 40vh !important;
+  }
+  ul{
+    line-height: 2;
+  }
+  .loo{
+      width: 100px;
+      height: 70px;
+      margin-top: -20px;
+  }
