@@ -1,49 +1,36 @@
-import { Link} from 'react-router-dom'
-import { useState } from 'react'
+import {useNavigate, Link} from 'react-router-dom'
 import './Signup.css'
 import { useFormik } from 'formik'
 import * as yup from 'yup'
+import axios from 'axios'
 const img = './images/signup.svg'
 export default function Signup() {
+  const navigate = useNavigate()
   const formik = useFormik({
     initialValues:{
       firstname:"",
       lastname:"",
       email:"",
+      phone_number:"",
       password:""
     },
+    
     onSubmit:(values)=>{
+      axios.post('http://localhost:4000/api/user/signup/', values)
+      .then(res =>{
+        if (res.data.status) {
+          navigate('/signin')
+        }
+      })
+      
       console.log(values);
     },
-    // validate:(values)=>{
-    //   let errors ={}
-    //     if (values.firstname=="") {
-    //       errors.firstname = "This field is required"
-    //     }else if (values.firstname.length<4) {
-    //       errors.firstname = "Firstname must be greater than four"
-    //     }
-    //     if (values.lastname=="") {
-    //       errors.lastname = "This field is required"
-    //     }else if (values.lastname.length<4) {
-    //       errors.lastname = "lastname must be greater than four"
-    //     }
-    //     if (values.email=="") {
-    //       errors.email = "This field is required"
-    //     }else if (values.email.length<4) {
-    //       errors.email = "email must be greater than four"
-    //     }
-    //     if (values.password=="") {
-    //       errors.password = "This field is required"
-    //     }else if (values.password.length<7) {
-    //       errors.password = "password must be greater than seven"
-    //     }
-    //   return errors
-    // }
 
     validationSchema : yup.object({
       firstname : yup.string().required('This field is required').min(5,'Must be up to 5 characters'),
       lastname : yup.string().required('This field is required').min(5,'Must be up to 5 characters'),
       email : yup.string().required('This field is required').email('Invalid email input'),
+      phone_number : yup.string().required('This field is required').min(11,'Must be up to 11 characters'),
       password : yup.string().required('This field is required').min(7,'Must be up to 7 characters'),
     })
   })
@@ -71,11 +58,8 @@ export default function Signup() {
                   onBlur={formik.handleBlur}
                   />
                   {formik.touched.firstname? <p className='text-danger'>{formik.errors.firstname}</p>:""}
-
-
-                
-                  
-                  
+    
+    
                 <label htmlFor="" className='ms-2'>Last Name</label>
                 <input 
                 type="text" 
@@ -97,6 +81,16 @@ export default function Signup() {
                 onBlur={formik.handleBlur}
                 />
                  {formik.touched.email? <p className='text-danger'>{formik.errors.email}</p>:""}
+                <label htmlFor="" className='ms-2'>Phone Number</label>
+
+                <input type="number" 
+                name='phone_number'
+                placeholder="phone_number" 
+                onChange={formik.handleChange}
+                className="form-control border-0 border-bottom shadow-none" 
+                onBlur={formik.handleBlur}
+                />
+                 {formik.touched.phone_number? <p className='text-danger'>{formik.errors.phone_number}</p>:""}
                 <label htmlFor="" className='ms-2'>password</label>
 
                 <input 
@@ -120,7 +114,7 @@ export default function Signup() {
                 </form>
                 </div>
               </div>
-              <img src={img} alt="" />
+              <img src={img}  alt="" className='d-sm-' />
        
     </div>
     </>

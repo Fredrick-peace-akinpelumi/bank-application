@@ -2,6 +2,7 @@ import "./Signin.css"
 import { Link } from 'react-router-dom'
 import { useFormik } from 'formik'
 import * as yup from 'yup'
+import axios from "axios"
 const img = './images/signin.PNG'
 export default function Signin() {
   const formik = useFormik({
@@ -10,7 +11,10 @@ export default function Signin() {
       password:""
     },
     onSubmit:(values)=>{
-      console.log(values);
+      axios.post("http://localhost:4000/api/user/signin/",values).then(res=>{
+        console.log(res.data.message)
+      })
+    
     },
     validationSchema : yup.object({
       email : yup.string().required('This field is required').email('Invalid email input'),
@@ -27,7 +31,7 @@ export default function Signin() {
                 <div className="p-5 shadow">
                 <h3>Sign in to Kuda</h3>
                 <p>To sign in make sure your email is the same as the one used while opening kuda account</p>
-             <form action="" onSubmit={formik.handleSubmit}>
+             <form  onSubmit={formik.handleSubmit}>
              <label htmlFor="" className='ms-2'>Email Address</label>
                 <input
                  type="Firstname"
@@ -52,7 +56,7 @@ export default function Signin() {
                  className='btn p-3 w-50' 
                  type="submit"
                  style={{backgroundColor:"rgb(64,25,109)", color:"white"}}>
-                  Sign Up
+                  Sign In
                  </button>
              </form>
                 </div>
