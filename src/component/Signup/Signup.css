@@ -4,6 +4,17 @@
 }
 
 .cont{
-    margin-top: 15vh;
+    margin-top: 5vh;
     margin-left: 30vh !important;
 }
+
+@media (max-width:760px) {
+    .imgg{
+        display: none;
+    }
+    .cont{
+        margin-top: 15vh;
+        margin-left: 0vh !important;
+    }
+}
+

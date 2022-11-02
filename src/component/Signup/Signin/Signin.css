@@ -1,4 +1,16 @@
 .cont{
-    margin-top: 20vh;
+    margin-top: 5vh;
     margin-left: 20vh !important;
+}
+.img{
+    margin-top: 5vh;
+}
+@media (max-width:760px) {
+    .img{
+        display: none;
+    }
+    .cont{
+        margin-top: 15vh;
+        margin-left: 0vh !important;
+    }
 }

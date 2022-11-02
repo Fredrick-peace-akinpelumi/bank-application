@@ -81,7 +81,7 @@ export default function Dashboardcont() {
     </div>
     {/* Second Section on cont */}
     <div className="container-fluid p-5">
-        <div className="d-lg-flex d-sm-block justify-content-around ">
+        <div className="part  justify-content-around ">
             <img className='size' src={tc} alt="" />
             <img className='size' src={world} alt="" />
             <img className='size' src={fintech} alt="" />
@@ -92,7 +92,7 @@ export default function Dashboardcont() {
     </div>
     <div className="container-fluid mt-5" style={{backgroundColor:"rgb(251,251,251)",padding:"60px"}}>
         <h1 className='theColor text-center'><b>Our Partners</b></h1>
-        <div className="d-lg-flex d-sm-block justify-content-around down">
+        <div className="part justify-content-around down">
             <img className='size' src={valar} alt="" />
             <img className='size' src={entree} alt="" />
             <img className='size' src={sbi} alt="" />
@@ -109,7 +109,7 @@ export default function Dashboardcont() {
         <thead>
     <tr>
       <th scope="col"></th>
-      <th scope="col" className='theColor'>Other Banks</th>
+      <th scope="col" className='theColor '>Other Banks</th>
       <th><img className='w-25 mt-2' src={logo} alt="" /></th>
     </tr>
   
@@ -163,10 +163,10 @@ export default function Dashboardcont() {
         </div>
     </div>
     {/* get kuda section */}
-    <div className="container p-5 get" >
+    <div className="container p-lg-5 get" >
         <div className="row">
            <div className="d-lg-flex">
-           <div className="col-4 p-3 what">
+           <div className="col-lg-4 col-sm-12 col-md-6 p-3 what">
            <h3 className='theColor '><b>Get the app now, dump <br /> bank fees for good.</b></h3>
             <p style={{fontSize:"15px"}}>It only takes a few minutes to start enjoying free benefits. Download Kuda on Google Play or the App Store.</p>
             <button className='btn butto text-white' >Get Kuda</button>
@@ -210,13 +210,13 @@ export default function Dashboardcont() {
             <li>Cookie Policy</li>
         </ul>
        </div>
-      <div className='p-5'>
+      <div className='p-lg-5'>
       <img src={play} alt="" />
        <img src={google} alt="" />
        <img src={kuda} alt="" />
       </div>
     </div>
-    <p className='text-center' style={{fontSize:"15px", color:"rgb(171,171,171)"}}>Products may vary by country or market.</p>
+    <p className='text-center ' style={{fontSize:"15px", color:"rgb(171,171,171)"}}>Products may vary by country or market.</p>
   <div className="container w-50 mt-5">
   <div className="d-lg-flex justify-content-between">
    <ul className='navbar-nav' style={{lineHeight:"1"}}>

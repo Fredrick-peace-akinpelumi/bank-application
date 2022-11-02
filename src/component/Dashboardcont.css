@@ -14,3 +14,15 @@
         }
       
 }
+.part{
+  display: flex;
+}
+
+@media (max-width:760px) {
+  .part{
+    display: flex;
+    flex-wrap: wrap;
+  }
+ 
+  
+}

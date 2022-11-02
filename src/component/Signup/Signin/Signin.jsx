@@ -1,18 +1,28 @@
 import "./Signin.css"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useFormik } from 'formik'
 import * as yup from 'yup'
 import axios from "axios"
+import Navbar from "../../Navbar"
 const img = './images/signin.PNG'
 export default function Signin() {
+  const navigate = useNavigate()
   const formik = useFormik({
     initialValues:{
       email:"",
       password:""
     },
     onSubmit:(values)=>{
-      axios.post("http://localhost:4000/api/user/signin/",values).then(res=>{
+      axios.post("http://localhost:4000/api/user/signin/",values)
+      .then(res=>{
         console.log(res.data.message)
+      }).catch(err=>{
+        if (err.message="network error") {
+          console.log(err.message)
+          navigate('/error')
+          
+        }
+        
       })
     
     },
@@ -23,8 +33,9 @@ export default function Signin() {
   })
   return (
       <>
+      <Navbar/>
        <div className="container-fluid d-lg-flex cont">
-              <div className="col-lg-4 col-sm-12 col-md-6 p-5 mt-5">
+              <div className="col-lg-4 col-sm-12 col-md-6 p-lg-5 mt-5">
               <div className="alert alert-primary"> 
                 <p className="theColor"><i className="fa-solid fa-lock" style={{color:"rgb(72,211,138)"}}></i> Please, check your browser’s address bar to be sure you’re on</p>
                 </div>

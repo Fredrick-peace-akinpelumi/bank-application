@@ -3,6 +3,7 @@ import './Signup.css'
 import { useFormik } from 'formik'
 import * as yup from 'yup'
 import axios from 'axios'
+import Navbar from '../Navbar'
 const img = './images/signup.svg'
 export default function Signup() {
   const navigate = useNavigate()
@@ -21,6 +22,11 @@ export default function Signup() {
         if (res.data.status) {
           navigate('/signin')
         }
+      }).catch(err=>{
+        if (err.message="network error") {
+          console.log(err.message)
+          navigate('/error')
+        }
       })
       
       console.log(values);
@@ -38,8 +44,9 @@ export default function Signup() {
 
   return (
     <>
-    <div className="container-fluid d-lg-flex cont ">
-              <div className="col-lg-4 col-sm-12 col-md-6 p-5 mt-5">
+    <Navbar/>
+    <div className="container-fluid d-lg-flex  cont ">
+              <div className="col-lg-4 col-sm-12 col-md-12 p-lg-5 ">
               <div className="alert alert-primary"> 
                 <p className="theColor"><i className ="fa-solid fa-lock" style={{color:"rgb(72,211,138)"}}></i> Please, check your browser’s address bar to be sure you’re on</p>
                 </div>
@@ -114,7 +121,7 @@ export default function Signup() {
                 </form>
                 </div>
               </div>
-              <img src={img}  alt="" className='d-sm-' />
+              <img src={img}  alt="" className='imgg' />
        
     </div>
     </>
