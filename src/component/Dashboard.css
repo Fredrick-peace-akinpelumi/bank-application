@@ -145,7 +145,7 @@ body{
   .boxes{
     width: 40vh;
   }
-  @media (max-width:760px) {
+@media (max-width:760px) {
     .sign{
         margin-left: -55vh;
         /* border: solid thick red; */
@@ -229,11 +229,10 @@ body{
         overflow:hidden;
     }
     .marquee{
-          /* height: 20vh; */
-          width: 45vh !important;
-        display:block;
-      position:relative;
-      animation:scroll 20s linear infinite;
+    width: 45vh !important;
+    display:block;
+    position:relative;
+    animation:scroll 20s linear infinite;
      
       }
       
@@ -281,7 +280,7 @@ body{
       }
       .loo{
           width: 100px;
-          height: 70px;
+          height: 100px;
           margin-top: -20px;
       }
 }

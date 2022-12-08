@@ -24,3 +24,9 @@ body::-webkit-scrollbar-thumb{
   width: 1px;
   background-color: white;
 }
+.scrollbar{
+  max-height: 60vh;
+   /* border: 1px solid red; */
+  min-height: 60vh;
+  overflow-y: scroll;
+}

@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom'
 
-const logo = './images/kudalogo-removebg-preview.png'
+const logo = './images/bank logo.PNG'
 export default function Navbar() {
     const navigate = useNavigate()
     const getKuda=()=>{
@@ -10,7 +10,7 @@ export default function Navbar() {
     <>
      <nav className="navbar navbar-expand-lg navbar-dark bg-white fixed-top ">
  <div className="container-fluid shift " style={{marginLeft:"20vh"}}>
-  <a className="navbar-brand "><img className=" ms-5" style={{ width:"13vh"}} src={logo} alt="" /></a>
+  <a className="navbar-brand "><img className=" ms-5" style={{ width:"12vh", height:"70px"}} src={logo} alt="" /></a>
   <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
   </button>
@@ -49,7 +49,7 @@ export default function Navbar() {
 	</ul>
   <ul className="navbar-nav sign col-lg-6">
    <li className="nav-item active"> <Link className="nav-link" style={{color:"rgb(64,25,109)"}} to={'/signin'}><b>Sign in</b></Link> </li>
-    <button className="btn text-white p-2 butt ms-5" onClick={getKuda}>Get Kuda</button>
+    <button className="btn text-white p-2 butt ms-5" onClick={getKuda}>Get Dcb</button>
   </ul>
   </div> 
  </div> 

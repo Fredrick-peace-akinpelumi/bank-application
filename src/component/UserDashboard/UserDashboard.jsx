@@ -13,7 +13,7 @@ export default function UserDashboard() {
     <>
     <NavbarTwo/>
   <div className="p-3" style={{backgroundColor:"rgb(18,18,18)", height:"950px",  width:"100%", marginTop:"70px"}}>
-    <div className=" mx-auto text-light col-lg-6 col-sm-12 col-md-6 "  >
+    <div className=" mx-auto text-light col-lg-6 col-sm-12 col-md-12 "  >
 
     {Switch==="spend"? <div className="d-flex justify-content-between p-3 ">
      <div >
@@ -54,7 +54,7 @@ export default function UserDashboard() {
       {/* starting of transaction history */}
    {Switch==="spend"? <div >
       <input type="text" placeholder='Search Transactions' className='form-control shadow-none text-white mt-3 border-0 p-3' style={{backgroundColor: "rgb(24,24,24)"}}/>
-    <div className="d-flex justify-content-between">
+    <div className="d-flex justify-content-between ">
     <div className="d-flex mt-4">
       <img className=" bg-white rounded-circle" style={{width:"30px", height:"30px"}} src={logo} alt="" />
       <p className="ms-1">Peace akinpelumi fredrick</p>

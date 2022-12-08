@@ -20,7 +20,7 @@ export default function Dashboard() {
           <h1 className="bank"><b>We’re the bank of <br /> the free</b></h1>
           <p className="fs-4">We’re here to help you get the best out of <br/> your money, no strings attached. <br/>
               Welcome to your freedom!</p>
-              <button className="btn text-white ms-3 p-2 butto">Get Kuda</button>
+              <button className="btn text-white ms-3 p-2 butto">Get Dcb</button>
           </div>
         </div>
           <img src={round} className="round" alt="" />
